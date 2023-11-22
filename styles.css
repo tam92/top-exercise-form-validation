@@ -3,3 +3,71 @@
     padding:0;
     box-sizing: border-box;
 }
+
+html {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 10vw;
+}
+
+h1 {
+    margin: 20px;
+    color: rgb(0, 0, 50);
+    text-shadow: 1px 1px 2px pink;
+    font-size: 2.4em;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid rgb(0, 0, 50);
+    margin: 20px;
+    width: 380px;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+div.submit-button {
+    justify-content: center;
+    padding: 20px;
+}
+
+label {
+    font-weight: 600;
+}
+
+select {
+    padding: 2px;
+}
+
+input[type="submit"] {
+    font-weight: 700;
+    padding: 6px 10px;
+}
+
+/* style of inputs with errors */
+input:invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+input:focus:invalid {
+    outline: none;
+  }
+
+  /* This is the style of our error messages */
+.error {
+    font-size: 80%;
+    font-weight: 600;
+    color: white;
+    background-color: #900;
+    border-radius: 6px;
+    padding: 2px 10px;
+}

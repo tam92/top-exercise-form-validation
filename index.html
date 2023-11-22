@@ -8,6 +8,44 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
-    
+    <h1>Form validation:</h1>
+
+    <form id="form">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        <span id="span-email" aria-live="polite"></span>
+        <div>
+            <label for="country">Country</label>
+            <select id="select-country" required>
+                <option value="\d{5}">Spain</option>
+                <option value="\d{2}[ ]?\d{3}">France</option>
+                <option value="\d{4}">New Zeland</option>
+                <option value="\d{5}[\-]?\d{3}">Brazil</option>
+                <option value="\d{2}-\d{3}">Poland</option>
+                <option value="\d{4}([\-]\d{3})?">Portugal</option>
+                <option value="\d{3}-\d{4}">Japan</option>
+            </select>
+        </div>
+        <span id="span-country"></span>
+        <div>
+            <label for="zip-code">Zip code:</label>
+            <input type="text" name="zip-code" id="zip-code" pattern="\d{5}" required/>
+        </div>
+        <span id="span-zip-code" aria-live="polite"></span>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <label for="password-2">Confirm password:</label>
+            <input type="password" name="password-2" id="password-2" required>
+        </div>
+        <span id="span-password" aria-live="polite"></span>
+        <div class="submit-button">
+            <input type="submit" id="submit" value="Submit!" />
+        </div>
+    </form>
 </body>
 </html>

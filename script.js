@@ -13,7 +13,7 @@ const email = document.getElementById("email");
 const spanEmail = document.getElementById("span-email");
 
 email.addEventListener("input", (event) => {
-    // remove .setCustomValidity
+        // remove .setCustomValidity
     
     if (email.validity.valueMissing) {
         spanEmail.textContent = "You need to enter an email address."
@@ -46,13 +46,11 @@ selectCountry.addEventListener("change", (e) => {
     // console.log(`e.target.value = ${ e.target.value }`);
 })
 
-zipCode.setCustomValidity("Enter a zip-code!");
 // Check if the zip-code is valid for the selected country
 zipCode.addEventListener("input", (event) => {
         // Error messages
         if (zipCode.validity.valueMissing) {
             spanZipCode.textContent = "You need to enter a zip-code."
-            
             spanZipCode.className = "error";
         }else if (zipCode.validity.patternMismatch) {
             spanZipCode.textContent = "Zip-code not valid for the selected country."
